@@ -444,7 +444,7 @@ sprites.onOverlap(SpriteKind.defender2, SpriteKind.Tower, function (sprite, othe
 })
 sprites.onOverlap(SpriteKind.defender, SpriteKind.ANGEL, function (sprite, otherSprite) {
     sprites.destroyAllSpritesOfKind(SpriteKind.ANGEL)
-    info.changeScoreBy(250)
+    info.changeScoreBy(25)
 })
 sprites.onOverlap(SpriteKind.Tower, SpriteKind.ANGEL, function (sprite, otherSprite) {
     sprites.destroyAllSpritesOfKind(SpriteKind.ANGEL)
