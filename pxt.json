@@ -1,5 +1,6 @@
 {
     "name": "DEMONIC TOWER DEFENCE",
+    "version": "0.0.1",
     "description": "",
     "dependencies": {
         "device": "*"
