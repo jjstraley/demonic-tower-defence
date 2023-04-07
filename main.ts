@@ -566,6 +566,7 @@ controller.B.onEvent(ControllerButtonEvent.Released, function () {
         tiles.placeOnRandomTile(mySprite15, assets.tile`myTile17`)
         tiles.placeOnRandomTile(mySprite16, assets.tile`myTile18`)
         tiles.placeOnRandomTile(mySprite12, assets.tile`myTile3`)
+        mySprite12.follow(mySprite13)
     } else {
         animation.stopAnimation(animation.AnimationTypes.All, mySprite)
     }
@@ -581,7 +582,7 @@ sprites.onOverlap(SpriteKind.defender2, SpriteKind.Tower, function (sprite, othe
 })
 sprites.onOverlap(SpriteKind.defender, SpriteKind.ANGEL, function (sprite, otherSprite) {
     sprites.destroyAllSpritesOfKind(SpriteKind.ANGEL)
-    info.changeScoreBy(25)
+    info.changeScoreBy(250)
 })
 sprites.onOverlap(SpriteKind.Tower, SpriteKind.ANGEL, function (sprite, otherSprite) {
     sprites.destroyAllSpritesOfKind(SpriteKind.ANGEL)
