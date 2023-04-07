@@ -64,7 +64,7 @@ info.onScore(250, function () {
             )
             mySprite11.follow(mySprite6, 20)
         }
-    } else if (!(boughtdeathsquare) && boughtdefender3) {
+    } else if (boughtdeathsquare && boughtdefender3) {
         _new = true
         game.showLongText("PRESS B ON THE TOWER TO GAIN THE NEXT DEFENCE", DialogLayout.Bottom)
     } else if (boughtdeathsquare && !(johncena)) {
