@@ -110,7 +110,7 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     }
 })
 sprites.onOverlap(SpriteKind.gaurdiandemon, SpriteKind.two, function (sprite, otherSprite) {
-    mySprite12.follow(mySprite15, 15)
+    mySprite12.follow(mySprite14, 20)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Poinr1, function (sprite, otherSprite) {
     if (controller.B.isPressed()) {
@@ -450,9 +450,6 @@ sprites.onOverlap(SpriteKind.angel3, SpriteKind.defender, function (sprite, othe
     sprites.destroyAllSpritesOfKind(SpriteKind.angel3)
     info.changeScoreBy(25)
 })
-sprites.onOverlap(SpriteKind.gaurdiandemon, SpriteKind.four, function (sprite, otherSprite) {
-    mySprite12.follow(mySprite13, 15)
-})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
     if (controller.B.isPressed()) {
         mysprite4.follow(mySprite, 0)
@@ -525,57 +522,16 @@ controller.B.onEvent(ControllerButtonEvent.Released, function () {
             f . . . . . . . . . . . . . . . 
             f . . . . . . . . . . . . . . . 
             `, SpriteKind.two)
-        mySprite15 = sprites.create(img`
-            f . . . . . . . . . . . . . . . 
-            f . . . . . . . . . . . . . . . 
-            f . . . . . . . . . . . . . . . 
-            f . . . . . . . . . . . . . . . 
-            f . . . . . . b b b b b . . . . 
-            f . . . . . . b b b b b . . . . 
-            f . . . . . . b b b b b . . . . 
-            f . . . . . . b b b b b . . . . 
-            f . . . . . . b b b b b . . . . 
-            f . . . . . . . . . . . . . . . 
-            f . . . . . . . . . . . . . . . 
-            f . . . . . . . . . . . . . . . 
-            f . . . . . . . . . . . . . . . 
-            f . . . . . . . . . . . . . . . 
-            f . f f . . . . . . . . . . . . 
-            f f f f f f f f f f f f f f f f 
-            `, SpriteKind.three)
-        mySprite16 = sprites.create(img`
-            . . . . . . . . . . . . . . . f 
-            . . . . . . . . . . . . . . . f 
-            . . . . . . . . . . . . . . . f 
-            . . . . . . . . . . . . . . . f 
-            . . . . . . . . . . . . . . . f 
-            . . . . . b b b b b . . . . . f 
-            . . . . . b b b b b . . . . . f 
-            . . . . . b b b b b . . . . . f 
-            . . . . . b b b b b . . . . . f 
-            . . . . . b b b b b . . . . . f 
-            . . . . . . . . . . . . . . . f 
-            . . . . . . . . . . . . . . . f 
-            . . . . . . . . . . . . . . . f 
-            . . . . . . . . . . . . . . . f 
-            . . . . . . . . . . . . . . . f 
-            f f f f f f f f f f f f f f f f 
-            `, SpriteKind.four)
         tiles.placeOnRandomTile(mySprite13, assets.tile`myTile15`)
         tiles.placeOnRandomTile(mySprite14, assets.tile`myTile16`)
-        tiles.placeOnRandomTile(mySprite15, assets.tile`myTile17`)
-        tiles.placeOnRandomTile(mySprite16, assets.tile`myTile18`)
         tiles.placeOnRandomTile(mySprite12, assets.tile`myTile3`)
         mySprite12.follow(mySprite13)
     } else {
         animation.stopAnimation(animation.AnimationTypes.All, mySprite)
     }
 })
-sprites.onOverlap(SpriteKind.gaurdiandemon, SpriteKind.three, function (sprite, otherSprite) {
-    mySprite12.follow(mySprite16, 15)
-})
 sprites.onOverlap(SpriteKind.gaurdiandemon, SpriteKind.one, function (sprite, otherSprite) {
-    mySprite12.follow(mySprite14, 15)
+    mySprite12.follow(mySprite13, 20)
 })
 sprites.onOverlap(SpriteKind.defender2, SpriteKind.Tower, function (sprite, otherSprite) {
     mySprite8.follow(mySprite9, 30)
@@ -611,8 +567,6 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.point3, function (sprite, otherS
     }
 })
 let mySprite7: Sprite = null
-let mySprite16: Sprite = null
-let mySprite14: Sprite = null
 let mySprite13: Sprite = null
 let dud = false
 let projectile: Sprite = null
@@ -620,7 +574,7 @@ let bowisbought = false
 let mySprite10: Sprite = null
 let mySprite9: Sprite = null
 let mySprite8: Sprite = null
-let mySprite15: Sprite = null
+let mySprite14: Sprite = null
 let mySprite12: Sprite = null
 let _new = false
 let mySprite11: Sprite = null
