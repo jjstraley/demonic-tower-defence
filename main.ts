@@ -462,7 +462,7 @@ info.onLifeZero(function () {
     game.gameOver(false)
 })
 controller.B.onEvent(ControllerButtonEvent.Released, function () {
-    if (boughtdeathsquare && johncena) {
+    if (boughtdeathsquare && (johncena && mySprite.overlapsWith(mySprite6))) {
         mySprite12 = sprites.create(img`
             ........................
             ........................
