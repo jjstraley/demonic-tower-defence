@@ -67,7 +67,7 @@ info.onScore(250, function () {
     } else if (!(boughtdeathsquare) && boughtdefender3) {
         _new = true
         game.showLongText("PRESS B ON THE TOWER TO GAIN THE NEXT DEFENCE", DialogLayout.Bottom)
-    } else if (boughtdeathsquare) {
+    } else if (boughtdeathsquare && !(johncena)) {
         game.showLongText("PRESS B TO OBTAIN THE NEXT DEFENCE", DialogLayout.Bottom)
         johncena = true
     }
@@ -622,11 +622,11 @@ let mySprite9: Sprite = null
 let mySprite8: Sprite = null
 let mySprite15: Sprite = null
 let mySprite12: Sprite = null
-let johncena = false
 let _new = false
 let mySprite11: Sprite = null
 let _250number = false
 let score_100 = false
+let johncena = false
 let boughtdeathsquare = false
 let boughtdefender3 = false
 let boughtDefender2 = false
