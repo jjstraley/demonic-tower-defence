@@ -64,9 +64,12 @@ info.onScore(250, function () {
             )
             mySprite11.follow(mySprite6, 20)
         }
-    } else if (boughtdeathsquare && boughtdefender3) {
+    } else if (!(boughtdeathsquare) && boughtdefender3) {
         _new = true
         game.showLongText("PRESS B ON THE TOWER TO GAIN THE NEXT DEFENCE", DialogLayout.Bottom)
+    } else if (boughtdeathsquare && !(jjrules)) {
+        jjrules = true
+        game.showLongText("PRESS B ON THE TOWER TO GAIN YOUR NEXT DEFENCE", DialogLayout.Bottom)
     }
 })
 sprites.onOverlap(SpriteKind.defender, SpriteKind.point3, function (sprite, otherSprite) {
@@ -459,7 +462,7 @@ info.onLifeZero(function () {
     game.gameOver(false)
 })
 controller.B.onEvent(ControllerButtonEvent.Released, function () {
-    if (boughtdeathsquare && (_new && mySprite.overlapsWith(mySprite6))) {
+    if (boughtdeathsquare && (jjrules && mySprite.overlapsWith(mySprite6))) {
         mySprite12 = sprites.create(img`
             ........................
             ........................
@@ -623,6 +626,7 @@ let _new = false
 let mySprite11: Sprite = null
 let _250number = false
 let score_100 = false
+let jjrules = false
 let boughtdeathsquare = false
 let boughtdefender3 = false
 let boughtDefender2 = false
